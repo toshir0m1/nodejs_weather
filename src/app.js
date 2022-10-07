@@ -10,6 +10,7 @@ const weather = require('./utils/weather');
 const publicDir = path.join(__dirname, '../public');
 const viewsDir = path.join(__dirname, '../templates/views');
 const partialsDir = path.join(__dirname, '../templates/partials');
+const port = process.env.PORT || '3000';
 
 app.set('view engine', 'hbs');
 app.set('views', viewsDir);
@@ -89,6 +90,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen('3000', () => {
-    console.log('Started listening on port 3000...');
+app.listen(port, () => {
+    console.log('Started listening on port ' + port + '...');
 });
