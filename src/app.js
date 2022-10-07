@@ -62,14 +62,6 @@ app.get('/weather', (req, res) => {
                 location,
                 forecast
             });
-
-            /*res.render('weather', {
-                title: 'Your weather results',
-                name: 'Mapbox & Weatherstack',
-                query: req.query.address,
-                location,
-                forecast
-            });*/
         });
     });
 });
