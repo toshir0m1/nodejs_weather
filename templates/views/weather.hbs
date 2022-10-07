@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather</title>
+        <link rel="icon" href="/images/favicon.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <p>The best of The Weather</p>
+
+            <ul>
+                <li>You searched: {{query}}</li>
+                <li>We determined you were refering to: {{location}}</li>
+                <li>And the weather there is: {{forecast}}</li>
+            </ul>
+        </div>
+        {{>footer}}
+    </body>
+</html>
