@@ -21,8 +21,11 @@ const weatherCall = (latitude, longitude, callback) => {
                 });
             } else {
                 const {weather_descriptions, temperature, feelslike} = body.current;
+                const forecast = (temperature == feelslike) ?
+                    'The weather is currently "' + weather_descriptions + '". It is ' + temperature + ' degrees out and it feels just the same.':
+                    'The weather is currently "' + weather_descriptions + '". It is ' + temperature + ' degrees out but it feels like ' + feelslike + '.';
                 callback(undefined, {
-                    forecast: 'The weather is currently "' + weather_descriptions + '". It is ' + temperature + ' degrees out but it feels like ' + feelslike + '.'
+                    forecast
                 });
             }
         }
