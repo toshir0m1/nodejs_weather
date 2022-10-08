@@ -20,9 +20,9 @@ const weatherCall = (latitude, longitude, callback) => {
                     error: 'There is no data for this location'
                 });
             } else {
-                const {weather_descriptions, temperature, precip} = body.current;
+                const {weather_descriptions, temperature, feelslike} = body.current;
                 callback(undefined, {
-                    forecast: 'The weather is currently "' + weather_descriptions + '". It is ' + temperature + ' degrees out. There is a ' + (+precip * 100) + '% chance of rain.'
+                    forecast: 'The weather is currently "' + weather_descriptions + '". It is ' + temperature + ' degrees out but it feels like ' + feelslike + '.'
                 });
             }
         }
